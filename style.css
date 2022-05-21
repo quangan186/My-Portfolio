@@ -1,0 +1,95 @@
+
+@font-face {
+    font-family: an-font;
+    src: url(fonts/Plaguard-ZVnjx.otf);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.header nav{
+    width: 100%;
+    height: auto;
+}
+
+.header nav ul{
+    display: flex;
+    list-style: none;
+}
+
+.header nav ul li{
+    width: 10%;
+    height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+#home{
+    text-align: center;
+    margin: 50px 0;
+}
+
+h1{
+    font-family: an-font;
+    letter-spacing: 10px;
+    font-size: 100px;
+    text-align: center;
+    margin: 50px 0;
+}
+
+.content{
+    margin: 0 30px;
+}
+
+.information-container{
+    display: flex;
+    width: 100%;
+    border: 1px solid black;
+}
+
+.profile-img, .profile-info{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+
+}
+.profile-img img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+} 
+
+.profile-info ul li{
+    font-size: 24px;
+    line-height: 80px;
+    text-align: left;
+}
+
+.profile-info ul li span{
+    font-weight: bold;
+}
+.profile-info ul p{
+    font-size: 24px;
+    line-height: 50px;
+    font-style: italic;
+}
