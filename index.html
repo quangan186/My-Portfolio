@@ -26,9 +26,9 @@
       <nav>
         <ul>
           <li><a href="#home">Home</a></li>
-          <li><a href="">Skill</a></li>
-          <li><a href="">Project</a></li>
-          <li><a href="">Contact</a></li>
+          <li><a href="#skills">Skill</a></li>
+          <li><a href="#projects">Project</a></li>
+          <li><a href="#contact-me">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -38,7 +38,12 @@
         <h1>Diablo</h1>
         <div class="information-container">
           <div class="profile-img">
-            <img src="./images/ava.png" alt="an-avatar" />
+            <img src="./images/ava.png" alt="an-avatar"/>
+            <div class="intro">
+              <h3>Bui Quang An</h3>
+              <span>Web developer, Game developer</span>
+            </div>
+            
           </div>
 
           <div class="profile-info">
@@ -79,34 +84,90 @@
         <div class="skills-container">
           <div class="skill">
             <img src="./images/html.png" alt="html-icon" />
+            <div class="start-rate-container">
+              <i class="fa-solid fa-star checked"></i>
+              <i class="fa-solid fa-star checked"></i>
+              <i class="fa-solid fa-star checked"></i>
+              <i class="fa-solid fa-star checked"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
           </div>
 
           <div class="skill">
             <img src="./images/css.png" alt="css-icon" />
+            <div class="start-rate-container">
+              <i class="fa-solid fa-star checked"></i>
+              <i class="fa-solid fa-star checked"></i>
+              <i class="fa-solid fa-star checked"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
           </div>
 
           <div class="skill">
             <img src="./images/js.png" alt="js-icon" />
+            <div class="start-rate-container">
+              <i class="fa-solid fa-star checked"></i>
+              <i class="fa-solid fa-star checked"></i>
+              <i class="fa-solid fa-star checked"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
           </div>
 
           <div class="skill">
             <img src="./images/java.png" alt="java-icon" />
+            <div class="start-rate-container">
+              <i class="fa-solid fa-star checked"></i>
+              <i class="fa-solid fa-star checked"></i>
+              <i class="fa-solid fa-star checked"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
           </div>
 
           <div class="skill">
             <img src="./images/python.png" alt="python-icon" />
+            <div class="start-rate-container">
+              <i class="fa-solid fa-star checked"></i>
+              <i class="fa-solid fa-star checked"></i>
+              <i class="fa-solid fa-star checked"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
           </div>
 
           <div class="skill">
             <img src="./images/mysql.png" alt="mysql-icon" />
+            <div class="start-rate-container">
+              <i class="fa-solid fa-star checked"></i>
+              <i class="fa-solid fa-star checked"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
           </div>
 
           <div class="skill">
             <img src="./images/PHP.png" alt="php-icon" />
+            <div class="start-rate-container">
+              <i class="fa-solid fa-star checked"></i>
+              <i class="fa-solid fa-star checked"></i>
+              <i class="fa-solid fa-star checked"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
           </div>
 
           <div class="skill">
             <img src="./images/figma.png" alt="figma-icon" />
+            <div class="start-rate-container">
+              <i class="fa-solid fa-star checked"></i>
+              <i class="fa-solid fa-star checked"></i>
+              <i class="fa-solid fa-star checked"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
           </div>
         </div>
       </div>
@@ -128,7 +189,7 @@
       </div>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" id="contact-me">
       <h2>Contact me</h2>
       <div class="contact-container">
         <div class="contact-info">
@@ -139,7 +200,7 @@
             <li>
               <span>Facebook: </span>
               <a href="https://www.facebook.com/profile.php?id=100013348872340"
-                >An Bui</a
+                >https://www.facebook.com/profile.php?id=100013348872340</a
               >
             </li>
             <li><span>Phone number: </span> 0773939468</li>
@@ -171,5 +232,8 @@
       </div>
       <p>© 2022 Quang An. All Rights Reserved.</p>
     </footer>
+
+    <button onclick="topFunction()" id="scroll-to-top" title="Go to top"><i class="fas fa-angle-up"></i></button>
   </body>
+  <script src="index.js"></script>
 </html>
