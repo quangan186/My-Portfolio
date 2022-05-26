@@ -16,8 +16,12 @@ body {
   font-family: "Roboto", sans-serif;
   width: 100%;
   height: auto;
+  background-color: #045de9;
+  background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
 }
-
+.header {
+  margin: 20px 30px;
+}
 .header nav {
   width: 100%;
   height: auto;
@@ -37,11 +41,29 @@ body {
 }
 
 .header nav ul li a {
+  position: relative;
   text-decoration: none;
   color: black;
   font-size: 18px;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
+  letter-spacing: 1px;
+  padding-right: 10px;
+}
+
+.header nav ul li a::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 3px;
+  background-color: white;
+  left: 0;
+  bottom: -10px;
+  transition: 0.3s;
+}
+
+.header nav ul li a:hover::after {
+  width: 100%;
 }
 
 #home,
@@ -53,7 +75,7 @@ body {
 
 #skills {
   width: 100%;
-  height: 400px;
+  height: 50vh;
 }
 #projects {
   text-align: center;
@@ -65,7 +87,6 @@ h1 {
   letter-spacing: 10px;
   font-size: 70px;
   text-align: center;
-  /* margin: 50px 0; */
 }
 
 .content {
@@ -84,7 +105,8 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 30px 20px;
+  padding: 30px 50px;
+  background-color: white;
 }
 
 .profile-img {
@@ -94,6 +116,8 @@ h1 {
   justify-content: center;
   align-items: top;
   flex-direction: column;
+  background-color: #63a4ff;
+background-image: linear-gradient(315deg, #63a4ff 0%, #83eaf1 74%);
 }
 
 .intro {
@@ -114,16 +138,19 @@ h1 {
   font-size: 20px;
   line-height: 80px;
   text-align: left;
+  letter-spacing: 1px;
 }
 
 .profile-info ul li span {
   font-weight: bold;
+  letter-spacing: 1px;
 }
 .quotes {
   font-size: 20px;
   line-height: 50px;
   font-style: italic;
   text-align: left;
+  letter-spacing: 1px;
 }
 
 .sub-info ul {
@@ -185,6 +212,7 @@ h1 {
   transform: translateY(20px);
   transition: 0.25s;
 }
+
 .description:hover {
   opacity: 1;
   transition: all 0.25s ease;
@@ -193,6 +221,7 @@ h1 {
 .description:hover > * {
   transform: translateY(0);
 }
+
 .description a {
   text-decoration: none;
   color: white;
@@ -206,16 +235,20 @@ h1 {
 
 .footer {
   padding: 50px 30px;
-  background-color: rgb(34, 103, 141);
+  background-color: #182b3a;
+  background-image: linear-gradient(315deg, #182b3a 0%, #20a4f3 74%);
+  width: 100%;
 }
 
 .contact-container {
   display: flex;
 }
+
 .contact-info,
 .contact-form {
   width: 100%;
   line-height: 50px;
+  letter-spacing: 1px;
 }
 
 .contact-info ul {
@@ -223,19 +256,27 @@ h1 {
   margin: 0 20px;
 }
 
+.contact-info ul li {
+  letter-spacing: 1px;
+}
+
 .contact-info ul li span {
   font-weight: 700;
+  letter-spacing: 1px;
 }
 
 .contact-info ul li a {
   color: blue;
+  letter-spacing: 1px;
 }
+
 .contact-form input {
   width: 100%;
   height: 50px;
   padding: 10px;
   font-family: "Roboto", sans-serif;
   outline: none;
+  letter-spacing: 1px;
 }
 
 .contact-form textarea {
@@ -245,6 +286,7 @@ h1 {
   font-family: "Roboto", sans-serif;
   outline: none;
   resize: none;
+  letter-spacing: 1px;
 }
 
 .button {
@@ -272,9 +314,10 @@ h1 {
 }
 
 .skill:hover {
-  transform: scale(1.2);
+  transform: scale(1.5);
   transition-duration: 0.5s;
 }
+
 .skill:hover .start-rate-container {
   /* display: block; */
   visibility: visible;
@@ -283,12 +326,15 @@ h1 {
 }
 
 .intro h3 {
+  letter-spacing: 1px;
   font-size: 28px;
   font-weight: 800;
 }
+
 .intro span {
   font-size: 20px;
   font-weight: 500;
+  letter-spacing: 1px;
 }
 
 #scroll-to-top {
@@ -298,10 +344,110 @@ h1 {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: black;
+  background-color: #045de9;
+  background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
   box-shadow: 0 0 10px black;
   color: white;
   outline: none;
   cursor: pointer;
   border: none;
+}
+
+#clear {
+  border: none;
+  background: none;
+  background-color: rgb(181, 34, 34);
+  color: white;
+  cursor: pointer;
+}
+
+#send {
+  border: none;
+  background: none;
+  background-color: rgb(32, 32, 182);
+  color: white;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1200px) {
+  #skills {
+    height: 70vh;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .information-container {
+    flex-direction: column;
+  }
+
+  .profile-img {
+    padding: 30px 20px;
+    padding-bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+  }
+
+  .profile-img img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .profile-info {
+    padding: 20px 30px;
+    padding-top: 0;
+  }
+
+  .profile-info ul li {
+    font-size: 18px;
+    line-height: 80px;
+    text-align: left;
+  }
+
+  .intro h3 {
+    font-size: 24px;
+    font-weight: 800;
+  }
+
+  .intro span {
+    font-size: 18px;
+    font-weight: 500;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  #skills {
+    height: 80%;
+  }
+
+  h1 {
+    font-size: 50px;
+  }
+
+  .profile-img img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .header nav ul li {
+    width: 20%;
+  }
+
+  .profile-info ul li {
+    font-size: 16px;
+    line-height: 80px;
+    text-align: left;
+  }
+
+  .intro h3 {
+    font-size: 22px;
+    font-weight: 800;
+  }
+
+  .intro span {
+    font-size: 16px;
+    font-weight: 500;
+  }
 }
