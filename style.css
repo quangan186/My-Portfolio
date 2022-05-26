@@ -16,8 +16,10 @@ body {
   font-family: "Roboto", sans-serif;
   width: 100%;
   height: auto;
-  background-color: #045de9;
-  background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+  background-color: #E7E9EB;
+
+  /* background-color: #D7D7D7; */
+
 }
 .header {
   margin: 20px 30px;
@@ -56,7 +58,7 @@ body {
   content: "";
   width: 0;
   height: 3px;
-  background-color: white;
+  background-color: black;
   left: 0;
   bottom: -10px;
   transition: 0.3s;
@@ -70,16 +72,23 @@ body {
 #skills {
   text-align: center;
   padding-top: 50px;
-  border-bottom: 1px solid black;
+  /* border-bottom: 1px solid black; */
+  
 }
 
 #skills {
   width: 100%;
-  height: 50vh;
+  height: 60vh;
+  background-color: white;
+  box-shadow: 0px 0px 10px 5px #909090;
+
 }
 #projects {
   text-align: center;
-  padding-top: 50px;
+  margin: 100px 0;
+  padding: 50px 0;
+  background-color: white;
+  box-shadow: 0px 0px 10px 5px #909090;
 }
 
 h1 {
@@ -96,8 +105,9 @@ h1 {
 .information-container {
   display: flex;
   width: 100%;
-  border: 1px solid black;
-  margin: 50px 0;
+  margin: 50px 0 100px 0;
+  box-shadow: 0px 10px 10px 5px #909090;
+  background-color: #171C26;
 }
 
 .profile-info {
@@ -106,18 +116,19 @@ h1 {
   justify-content: center;
   align-items: center;
   padding: 30px 50px;
-  background-color: white;
+  color: white;
+  background-color: #171C26;
 }
 
 .profile-img {
-  padding: 60px 20px;
+  margin: 0 50px;
+  padding: 50px 0;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: top;
   flex-direction: column;
-  background-color: #63a4ff;
-background-image: linear-gradient(315deg, #63a4ff 0%, #83eaf1 74%);
+  background-color: #20262F;
 }
 
 .intro {
@@ -161,7 +172,8 @@ background-image: linear-gradient(315deg, #63a4ff 0%, #83eaf1 74%);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 50px 0;
+  /* margin: 50px 20px; */
+  padding: 50px 20px;
 }
 
 .skill img {
@@ -235,9 +247,9 @@ background-image: linear-gradient(315deg, #63a4ff 0%, #83eaf1 74%);
 
 .footer {
   padding: 50px 30px;
-  background-color: #182b3a;
-  background-image: linear-gradient(315deg, #182b3a 0%, #20a4f3 74%);
+  /* background-color: #E7E9EB; */
   width: 100%;
+  background-color: #D7D7D7;
 }
 
 .contact-container {
@@ -277,6 +289,7 @@ background-image: linear-gradient(315deg, #63a4ff 0%, #83eaf1 74%);
   font-family: "Roboto", sans-serif;
   outline: none;
   letter-spacing: 1px;
+  border: none;
 }
 
 .contact-form textarea {
@@ -287,6 +300,11 @@ background-image: linear-gradient(315deg, #63a4ff 0%, #83eaf1 74%);
   outline: none;
   resize: none;
   letter-spacing: 1px;
+  border: none;
+}
+
+.contact-form input:focus, .contact-form textarea:focus{
+    border: 2px solid #20262F;
 }
 
 .button {
@@ -299,6 +317,10 @@ background-image: linear-gradient(315deg, #63a4ff 0%, #83eaf1 74%);
   font-family: "Roboto", sans-serif;
 }
 
+.button input:active{
+    opacity: 0.7;
+    transition: 0.3s;
+}
 .footer p {
   margin: 20px 0;
 }
@@ -314,7 +336,7 @@ background-image: linear-gradient(315deg, #63a4ff 0%, #83eaf1 74%);
 }
 
 .skill:hover {
-  transform: scale(1.5);
+  transform: scale(1.2);
   transition-duration: 0.5s;
 }
 
@@ -329,12 +351,14 @@ background-image: linear-gradient(315deg, #63a4ff 0%, #83eaf1 74%);
   letter-spacing: 1px;
   font-size: 28px;
   font-weight: 800;
+  color: white;
 }
 
 .intro span {
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 1px;
+  color: white;
 }
 
 #scroll-to-top {
@@ -344,8 +368,7 @@ background-image: linear-gradient(315deg, #63a4ff 0%, #83eaf1 74%);
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: #045de9;
-  background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+  background-color: #20262F;
   box-shadow: 0 0 10px black;
   color: white;
   outline: none;
@@ -371,23 +394,30 @@ background-image: linear-gradient(315deg, #63a4ff 0%, #83eaf1 74%);
 
 @media only screen and (max-width: 1200px) {
   #skills {
-    height: 70vh;
+    height: 90vh;
   }
 }
 
 @media only screen and (max-width: 900px) {
+    #skills {
+        height: 80%;
+      }
+    .header nav ul li{
+        width: 20%;
+    }
   .information-container {
     flex-direction: column;
   }
 
   .profile-img {
-    padding: 30px 20px;
+    margin: 50px 0;
     padding-bottom: 0;
     width: 100%;
     display: flex;
     justify-content: center;
     height: 100%;
     flex-direction: column;
+    overflow: hidden;
   }
 
   .profile-img img {
@@ -415,6 +445,10 @@ background-image: linear-gradient(315deg, #63a4ff 0%, #83eaf1 74%);
     font-size: 18px;
     font-weight: 500;
   }
+  .contact-container{
+    flex-direction: column;
+    word-wrap: break-word;
+}
 }
 
 @media only screen and (max-width: 640px) {
@@ -432,9 +466,12 @@ background-image: linear-gradient(315deg, #63a4ff 0%, #83eaf1 74%);
   }
 
   .header nav ul li {
-    width: 20%;
+    width: 30%;
   }
 
+  .header nav ul li a{
+      font-size: 14px;
+  }
   .profile-info ul li {
     font-size: 16px;
     line-height: 80px;
@@ -450,4 +487,30 @@ background-image: linear-gradient(315deg, #63a4ff 0%, #83eaf1 74%);
     font-size: 16px;
     font-weight: 500;
   }
+  .skill{
+   width: 100%;
+    }
+    h1{
+        font-size: 24px;
+    }
+    .project img{
+        width: 200px;
+        height: 200px;
+    }
+    .description{
+        width: 200px;
+        height: 200px;
+    }
+
+    .contact-container{
+        flex-direction: column;
+        word-wrap: break-word;
+    }
+}
+
+.fa-star{
+    color: none;
+}
+.skill{
+    margin: 30px 0;
 }
