@@ -10,6 +10,17 @@
   scroll-behavior: smooth;
 }
 
+#countdown{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+#time{
+  font-size: 200px;
+}
 body {
   background-repeat: no-repeat;
   background-size: cover;
@@ -17,24 +28,24 @@ body {
   width: 100%;
   height: auto;
   background-color: #E7E9EB;
-
-  /* background-color: #D7D7D7; */
-
+  overflow:hidden;
 }
-.header {
+#header {
+  transform: translateX(200%);
+  transition: all 1s;
   margin: 20px 30px;
 }
-.header nav {
+#header nav {
   width: 100%;
   height: auto;
 }
 
-.header nav ul {
+#header nav ul {
   display: flex;
   list-style: none;
 }
 
-.header nav ul li {
+#header nav ul li {
   width: 10%;
   height: 50px;
   display: flex;
@@ -42,7 +53,7 @@ body {
   align-items: center;
 }
 
-.header nav ul li a {
+#header nav ul li a {
   position: relative;
   text-decoration: none;
   color: black;
@@ -53,7 +64,7 @@ body {
   padding-right: 10px;
 }
 
-.header nav ul li a::after {
+#header nav ul li a::after {
   position: absolute;
   content: "";
   width: 0;
@@ -64,12 +75,18 @@ body {
   transition: 0.3s;
 }
 
-.header nav ul li a:hover::after {
+#header nav ul li a:hover::after {
   width: 100%;
+}
+
+#home{
+  transform: translateX(-200%);
+  transition: all 1s;
 }
 
 #home,
 #skills {
+  transform: translateX(200%);
   text-align: center;
   padding-top: 50px;
   /* border-bottom: 1px solid black; */
@@ -78,17 +95,19 @@ body {
 
 #skills {
   width: 100%;
-  height: 60vh;
+  height: 80%;
   background-color: white;
   box-shadow: 0px 0px 10px 5px #909090;
-
+  transition: all 1s;
 }
 #projects {
+  transform: translateX(-200%);
   text-align: center;
   margin: 100px 0;
   padding: 50px 0;
   background-color: white;
   box-shadow: 0px 0px 10px 5px #909090;
+  transition: all 1s;
 }
 
 h1 {
@@ -246,10 +265,11 @@ h1 {
 }
 
 .footer {
+  transform: translateX(200%);
   padding: 50px 30px;
-  /* background-color: #E7E9EB; */
   width: 100%;
   background-color: #D7D7D7;
+  transition: all 1s;
 }
 
 .contact-container {
@@ -362,6 +382,7 @@ h1 {
 }
 
 #scroll-to-top {
+  display: none;
   position: fixed;
   right: 10px;
   bottom: 10px;
@@ -402,7 +423,7 @@ h1 {
     #skills {
         height: 80%;
       }
-    .header nav ul li{
+    #header nav ul li{
         width: 20%;
     }
   .information-container {
@@ -465,11 +486,11 @@ h1 {
     height: 150px;
   }
 
-  .header nav ul li {
+  #header nav ul li {
     width: 30%;
   }
 
-  .header nav ul li a{
+  #header nav ul li a{
       font-size: 14px;
   }
   .profile-info ul li {
